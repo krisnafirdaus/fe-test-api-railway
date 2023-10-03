@@ -1,6 +1,6 @@
 // Fetch data untuk header
 function fetchHeaderData() {
-    fetch('http://localhost:3000/header')
+    fetch('https://api-express-railway-production.up.railway.app/header')
         .then(response => response.json())
         .then(data => {
             const headerElement = document.querySelector('header .header-text');
@@ -28,7 +28,7 @@ function postContactFormData(event) {
     };
 
     // Kirim data sebagai JSON
-    fetch('http://localhost:3000/contact', {
+    fetch('https://api-express-railway-production.up.railway.app/contact', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
